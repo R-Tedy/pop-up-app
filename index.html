@@ -8,7 +8,25 @@
 </head>
 <body>
   <div class="main">
-    <button>Submit</button>
+    <button type="button" onclick="popMsg()" class="btn">Submit</button>
+    <div id="popup" class="popup">
+      <img src="./images/404-tick.png" alt="">
+      <h2>Thank You!</h2>
+      <p>Your Application has been Successfully submitted</p>
+      <button onclick="removePop()" type="button">ok</button>
+    </div>
   </div>
+
+  <script>
+    const popup = document.getElementById('popup');
+
+    function popMsg() {
+      popup.classList.add('pop-up');
+    }
+
+    function removePop() {
+      popup.classList.remove('pop-up');
+    }
+  </script>
 </body>
 </html>
